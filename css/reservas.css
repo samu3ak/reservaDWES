@@ -3,6 +3,7 @@
 }
 
 form {
+    margin:0% auto;
     background-color: rgb(216, 255, 221);
     width: 540px;
     height: 500px;
@@ -80,12 +81,13 @@ form button[type=submit]{
 form input[type=text]{
     border: 1px solid rgb(255, 175, 122);
 }
-
+body p{
+    font-size: 20px;
+}
 table, th, td {
     margin:0px auto;
     border-collapse: collapse;
-    border:3px solid rgb(238, 194, 180);
-    
+    border:3px solid rgb(255, 175, 122);
     text-align: center;
 
   }
@@ -96,10 +98,10 @@ table{
     color: olivedrab;
     font-weight: bold;
     font-size: large;
-    background-color: rgb(238, 194, 180);
+    background-color: rgb(255, 175, 122);
 }
 table th{
-    background-color:rgb(170, 202, 148);
+    background-color: rgb(216, 255, 221);
 
 }
 table td{
