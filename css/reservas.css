@@ -1,0 +1,79 @@
+.clearfix {
+    clear: both;
+}
+
+form {
+    background-color: rgb(216, 255, 221);
+    width: 540px;
+    height: 500px;
+    padding: 10px;
+    border: 2px solid rgb(255, 175, 122);
+}
+
+.labels{
+    height: 130px;
+    width: 140px;
+    float: left;
+}
+
+.primerosCampos{
+    height: 130px;
+    width: 400px;
+    float: left;
+}
+
+.primerosCampos input{
+    display: block;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+.primerosCampos input[name=nombre], input[name=email]{
+    width: 300px;
+}
+
+.primerosCampos input[name=numeroPersonas]{
+    width: 50px;
+}
+
+.labels label{
+    display: block;
+    padding-top: 10px;
+}
+
+.radioBox {
+    height: 150px;
+    width: 400px;
+}
+
+.radioBox label[for=edad] {
+    line-height: 150px;
+}
+
+.check {
+    float: right;
+    height: 110px;
+    width: 250px;
+    margin-top: 20px;
+}
+
+.check input {
+    margin-top: 10px;
+}
+
+form textarea{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.observaciones{
+    margin-top: 20px;
+    width: 90%;
+}
+
+form button[type=submit]{
+    display: inline;
+    margin-left: 80%;
+    margin-top: 20px;
+}
+

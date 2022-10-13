@@ -6,21 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/reservas.css">
 </head>
 
 <body>
     <form action="index.php" method="POST">
-        <label for="nombre">Nombre: </label>
-        <input type="text" name="nombre" placeholder="Tu nombre">
 
-        <label for="email">Email: </label>
-        <input type="text" name="email" placeholder="example@domain.com">
 
-        <label for="fecha">Fecha de la visita: </label>
-        <input type="text" name="fecha" placeholder="DD/MM/AAAA">
+        <div class="labels">
+            <label for="nombre">Nombre: </label>
+            <label for="email">Email: </label>
+            <label for="fecha">Fecha de la visita: </label>
+            <label for="numeroPersonas">Número de personas: </label>
+        </div>
 
-        <label for="numeroPersonas">Número de personas: </label>
-        <input type="text" name="numeroPersonas" placeholder="1, 2, 3...">
+        <div class="primerosCampos">
+            <input type="text" name="nombre" placeholder="Tu nombre">
+            <input type="text" name="email" placeholder="example@domain.com">
+            <input type="text" name="fecha" placeholder="DD/MM/AAAA">
+            <input type="text" name="numeroPersonas" placeholder="1, 2, 3...">
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="radioBox">
+            <label for="edad">Edad del grupo: </label>
+            <div class="check">
+                <input type="radio" name="numeroPersonas">
+                <label for="edad1">De 5 a 8</label>
+                <div class="clearfix"></div>
+                <input type="radio" name="numeroPersonas">
+                <label for="edad2">De 9 a 14</label>
+                <div class="clearfix"></div>
+                <input type="radio" name="numeroPersonas">
+                <label for="edad3">De 15 a 18</label>
+                <div class="clearfix"></div>
+                <input type="radio" name="numeroPersonas">
+                <label for="edad4">Adultos</label>
+            </div>
+        </div>
+
+        <input type="checkbox" name="asistir">
+        <label for="asistir">Deseamos asistir al aula educativa (sólo niños)</label>
+
+        <div class="clearfix"></div>
+        <div class="observaciones">
+            <label for="observaciones">Observaciones: </label>
+            <div class="clearfix"></div>
+            <textarea id="w3review" name="w3review" rows="6" cols="60"></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
     </form>
 </body>
 
