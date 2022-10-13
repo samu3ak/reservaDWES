@@ -20,13 +20,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 
         //Función que devuelve la info del campo dado
         function recogeDato($campo) {
-            $dato;
-            if ($_POST[$campo] == null) {
-                $dato = "";
-            } else {
-                $dato = $_POST[$campo];
-            }
-            return $dato;
+            return isset($_POST[$campo]) ? $_POST[$campo] : '';
         }
 
         //Variables para cada campo
@@ -34,10 +28,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         $email = recogeDato("email");
         $fechaRecibida = recogeDato("fecha");
         $fecha = substr($fechaRecibida, 6) . "-" . substr($fechaRecibida, 3, 2) . "-" . substr($fechaRecibida, 0, 2);
-        echo $fecha;
         $numeroPersonas = recogeDato("numeroPersonas");
         $edadGrupo = recogeDato("edad");
         $aulaEducativa = recogeDato("asistir");
+        if ($aulaEducativa == "on") {
+            $aulaEducativa = 1;
+        } else {
+            $aulaEducativa = 0;
+        }
         $observaciones = recogeDato("observaciones");
 
         //Selecciono la BD a conectar
@@ -45,6 +43,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 
         //Realizo la Query
         mysqli_query($con, "INSERT INTO reserva (Nombre, Correo, FechaVisita, NumPersonas, EdadGrupo, AulaEducativa, Observaciones, ID) VALUES ('$nombre','$email','$fecha','$numeroPersonas','$edadGrupo','$aulaEducativa','$observaciones',NULL)");
+
+        //Mensaje
+        echo "<h1>Enviado correctamente</h1>";
 
         //Cierro BD
         mysqli_close($con);
