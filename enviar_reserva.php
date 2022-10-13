@@ -33,7 +33,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         $nombre = recogeDato("nombre");
         $email = recogeDato("email");
         $fechaRecibida = recogeDato("fecha");
-        $fecha = substr($fechaRecibida, 6) . "-" . substr($fechaRecibida, 3, 4) . "-" . substr($fechaRecibida, 0, 1);
+        $fecha = substr($fechaRecibida, 6) . "-" . substr($fechaRecibida, 3, 2) . "-" . substr($fechaRecibida, 0, 2);
+        echo $fecha;
         $numeroPersonas = recogeDato("numeroPersonas");
         $edadGrupo = recogeDato("edad");
         $aulaEducativa = recogeDato("asistir");
