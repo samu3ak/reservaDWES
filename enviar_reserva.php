@@ -31,11 +31,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         $numeroPersonas = recogeDato("numeroPersonas");
         $edadGrupo = recogeDato("edad");
         $aulaEducativa = recogeDato("asistir");
-        if ($aulaEducativa == "on") {
-            $aulaEducativa = 1;
-        } else {
-            $aulaEducativa = 0;
-        }
         $observaciones = recogeDato("observaciones");
 
         //Selecciono la BD a conectar
